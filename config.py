@@ -17,7 +17,7 @@ MONGO_URI = os.getenv("MONGO_URI", "")
 DB_NAME = os.getenv("DB_NAME", "Cluster0")
 
 # Owner and bot details
-OWNER_ID = int(os.getenv("OWNER_ID", ""))
+OWNER_ID = int(os.getenv("OWNER_ID", "8076443359"))
 BOT_USERNAME = os.getenv("BOT_USERNAME", "RafinGroupBot")
 
 # Links and visuals
