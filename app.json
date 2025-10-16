@@ -1,0 +1,50 @@
+{
+  "name": "MyTelegramMusicBot",
+  "description": "A Telegram Music Bot built with Python, Pyrogram, and MongoDB.",
+  "repository": "https://github.com/yourusername/yourbotrepo",
+  "logo": "https://telegra.ph/file/your-logo-link.jpg",
+  "keywords": [
+    "telegram",
+    "music",
+    "bot",
+    "pyrogram",
+    "python"
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from https://my.telegram.org/apps",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Bot Token from @BotFather",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "Your MongoDB connection URI (e.g., from MongoDB Atlas)",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram User ID of the bot owner (integer only)",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "addons": [
+  {
+    "plan": "heroku-postgresql"
+  }
+]
